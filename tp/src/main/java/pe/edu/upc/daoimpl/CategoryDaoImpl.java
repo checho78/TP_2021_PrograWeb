@@ -42,7 +42,6 @@ public class CategoryDaoImpl implements ICategoryDao, Serializable {
 		return list;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public void delete (int idCategory) 
 	{
 		Category ca = new Category();

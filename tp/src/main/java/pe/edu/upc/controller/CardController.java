@@ -31,7 +31,7 @@ public class CardController implements Serializable {
 		 this.card = new Card();
 		 this.list();
 	 }
-	 public String newBrand() {
+	 public String newCard() {
 			this.setCard(new Card());
 			return "card.xhtml";
 	 }

@@ -10,11 +10,11 @@
 <ui:composition template="master.xhtml"> 
 	
 	<ui:define name="title">
-		.:Listado de Clientes:.
+		.:Listado de Category:.
 	</ui:define>
 	
 	<ui:define name="titleCont">
-		<span>Clientes</span>
+		<span>Category</span>
 	</ui:define>
 	
 	<ui:define name="content">
@@ -28,7 +28,7 @@
 							<h:outputLabel for="name" value="Búsqueda"	styleClass="control-label" />
 							<p:inputText autocomplete="off" id="firstName"
 								styleClass="form-control"
-								value="#{customerController.customer.firstName}" maxlength="45" />
+								value="#{categoryController.category.firstName}" maxlength="45" />
 						</div>
 					</div>				
 				
@@ -42,16 +42,16 @@
 							
 							
 								<p:commandButton value="Limpiar" update="lstCliente"
-									actionListener="#{customerController.clean()}"
+									actionListener="#{categoryController.clean()}"
 									styleClass="btn btn-default" ajax="false" />
 									
 									
 								<p:commandButton value="Buscar" update="lstCliente"
-									actionListener="#{customerController.findByName()}"
+									actionListener="#{categoryController.findByName()}"
 									styleClass="btn btn-danger" ajax="true" />						
 							
 							<p:commandButton value="Nuevo"						
-								action="#{customerController.newCustomer()}"
+								action="#{categoryController.newCategory()}"
 								styleClass="btn btn-primary ajax=false" />
 								
 								
@@ -67,7 +67,7 @@
 					<div class="form-group table-responsive box-table-class">
 						
 						<p:dataTable id="lstCliente" var="hope"
-							value="#{customerController.listCustomers}" paginator="true"
+							value="#{categoryController.listCategories}" paginator="true"
 							paginatorPosition="top" rowsPerPageTemplate="10,20,30,40,50"
 							rows="10" styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
@@ -82,25 +82,11 @@
 								<h:outputText value="#{hope.id}" />
 							</p:column>
 
-							<p:column headerText= "Nombre " sortBy="#{hope.firstName}">
-								<h:outputText value="#{hope.firstName}" />
+							<p:column headerText= "Categoria " sortBy="#{hope.name}">
+								<h:outputText value="#{hope.name}" />
 							</p:column>
 						
-							<p:column headerText= "Apellido " sortBy="#{hope.lastName}">
-								<h:outputText value="#{hope.lastName}" />
-							</p:column>
-							
-							<p:column headerText= "Celular" sortBy="#{hope.cellphone}">
-								<h:outputText value="#{hope.cellphone}" />
-							</p:column>
-				
-							<p:column headerText= "DNI" sortBy="#{hope.dni}">
-								<h:outputText value="#{hope.dni}" />
-							</p:column>
-							
-							<p:column headerText= "Email" sortBy="#{hope.email}">
-								<h:outputText value="#{hope.email}" />
-							</p:column>
+						
 				
 		
 						</p:dataTable>

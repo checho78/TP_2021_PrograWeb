@@ -17,9 +17,7 @@ import pe.edu.upc.service.ICategoryService;
 @Named
 @RequestScoped
 public class CategoryController {
-	
 	private static final long serialVersionUID = 1L;
-
 	
 	 @Inject
 	 private ICategoryService caS;

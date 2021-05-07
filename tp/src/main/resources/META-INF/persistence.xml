@@ -7,8 +7,13 @@
 	
 	<persistence-unit name="b" transaction-type="JTA">
 		<jta-data-source>java:/HopeDS</jta-data-source>
+		<class>pe.edu.upc.entity.Brand</class>
+		<class>pe.edu.upc.entity.Card</class>
+		<class>pe.edu.upc.entity.Category</class>
 		<class>pe.edu.upc.entity.Customer</class>
+		<class>pe.edu.upc.entity.Product</class>
 		<class>pe.edu.upc.entity.Reservation</class>
+		<class>pe.edu.upc.entity.ReservationDetailProduct</class>
 		<class>pe.edu.upc.entity.ReservationDetails</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 			<properties>
