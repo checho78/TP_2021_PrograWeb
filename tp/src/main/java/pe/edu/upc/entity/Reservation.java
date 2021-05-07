@@ -25,11 +25,11 @@ public class Reservation {
 	@Column(name = "commission", length = 50, nullable = false)
 	private String commission;
 	
-	@Column(name = "start_date", nullable = false)
+	@Column(name = "startDate", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date startDate;
 	
-	@Column(name = "end_date", nullable = false)
+	@Column(name = "endDate", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date endDate;
 	
