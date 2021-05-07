@@ -10,7 +10,6 @@ import pe.edu.upc.service.ICustomerService;
 
 public class CustomerServiceImpl implements ICustomerService {
 
-	
 	@Inject
 	private ICustomerDao cD;
 
