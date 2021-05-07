@@ -45,7 +45,7 @@ public class Card {
 
 	public Card() {
 		super();
-	  
+	   
 	} 
 
 	public int getId() {
