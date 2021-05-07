@@ -47,7 +47,7 @@ public class Card {
 		super();
 	   
 	} 
-
+	
 	public int getId() {
 		return id;
 	}

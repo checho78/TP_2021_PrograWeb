@@ -8,8 +8,7 @@ public interface IBrandDao {
 	public void insert(Brand brand);
 	public List<Brand> list();
 	public List<Brand> findByNameBrand(Brand brand);
-	public void delete(int id);
-	
+	public void delete(int id);	
 
 
 }
