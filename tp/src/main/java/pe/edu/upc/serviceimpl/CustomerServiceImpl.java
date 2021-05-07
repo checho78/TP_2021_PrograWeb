@@ -15,7 +15,8 @@ public class CustomerServiceImpl implements ICustomerService {
 
 	@Override
 	public void insert(Customer c) {
-		cD.insert(c);  	}
+		cD.insert(c);  
+	}
 
 	@Override
 	public List<Customer> list() {
