@@ -10,7 +10,6 @@ import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import pe.edu.upc.dao.IReservationDao;
-import pe.edu.upc.entity.Customer;
 import pe.edu.upc.entity.Reservation;
 
 public class ReservationDaoImpl implements IReservationDao, Serializable{
