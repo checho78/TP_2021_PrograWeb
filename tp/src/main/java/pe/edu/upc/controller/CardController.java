@@ -11,8 +11,9 @@ import javax.inject.Named;
 
 
 import pe.edu.upc.entity.Card;
+import pe.edu.upc.entity.Customer;
 import pe.edu.upc.service.ICardService;
-
+import pe.edu.upc.service.ICustomerService;
 @Named
 @RequestScoped
 public class CardController implements Serializable {
@@ -20,16 +21,25 @@ public class CardController implements Serializable {
 	
 	@Inject
 	 private ICardService cService;
+	@Inject
+	 private ICustomerService cS;
 	 
+	 private Customer customer;
 	 private Card card;
+
+	 
 	 List<Card> listCards;
+	 List<Customer> listCustomers;
 	 
 	 @PostConstruct
 	 public void init()
 	 {
 		 this.listCards =  new ArrayList<Card>();
+		 this.listCustomers =  new ArrayList<Customer>();
 		 this.card = new Card();
+		 this.customer = new Customer();
 		 this.list();
+		 this.listCustomer();
 	 }
 	 public String newCard() {
 			this.setCard(new Card());
@@ -40,6 +50,10 @@ public class CardController implements Serializable {
 			this.clean();
 			this.list();
 	 }
+	 
+		public void listCustomer() {
+			listCustomers = cS.list();
+		}
 	 public void list() {
 			listCards = cService.list();
 		}
@@ -63,13 +77,35 @@ public class CardController implements Serializable {
 				System.out.println(e.getMessage());
 			}
 	     }
-//eliminar
+//eliminartarjeta
+		
+		public void deleteCard(Card card) {
+			cService.delete(card.getId());
+			this.list();
+		}
+
+		public Customer getCustomer() {
+			return customer;
+		}
+
+		public void setCustomer(Customer customer) {
+			this.customer = customer;
+		}
+		
 		public Card getCard() {
 			return card;
 		}
 
 		public void setCard(Card card) {
 			this.card = card;
+		}
+		
+		public List<Customer> getListCustomers() {
+			return listCustomers;
+		}
+
+		public void setListCustomer(List<Customer> listCustomers) {
+			this.listCustomers = listCustomers;
 		}
 
 		public List<Card> getListCards() {
