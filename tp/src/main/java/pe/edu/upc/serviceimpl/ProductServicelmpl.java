@@ -30,5 +30,9 @@ public class ProductServicelmpl implements IProductService{
 		// TODO Auto-generated method stub
 		return pD.findByNameProdcut(p);
 	}
+	
+	public void eliminar(int idproduct) {
+		pD.eliminar(idproduct);
+	}
 
 }

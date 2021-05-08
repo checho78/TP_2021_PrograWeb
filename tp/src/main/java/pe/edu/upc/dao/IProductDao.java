@@ -9,4 +9,6 @@ public interface IProductDao {
 	public void insert(Product p);
 	public List<Product> list();
 	public List<Product> findByNameProdcut(Product c);
+	public void eliminar(int idproduct);
+	
 }

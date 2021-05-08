@@ -9,4 +9,5 @@ public interface IProductService {
 	public void insert(Product p);
 	public List<Product> list();
 	public List<Product> fingByNameProduct(Product c);
+	public void eliminar(int idproduct);
 }
