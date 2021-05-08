@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,19 +26,13 @@ public class Product {
 	@Column(name = "description_id", length = 100)
 	private String description;
 	
+	@ManyToOne
+	@JoinColumn(name = "id")
+	private Brand brand;
 	
-	
-	public Product(Integer id, String name, Float price, String description){
-		super();
-		this.id = id;
-		this.name = name;
-		this.price = price;
-		this.description = description;
-	}
-	
-	public Product(){
-		super();
-	}
+	@ManyToOne
+	@JoinColumn(name = "id")
+	private Category category;
 
 	public Integer getId() {
 		return id;
@@ -68,6 +64,37 @@ public class Product {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Brand getBrand() {
+		return brand;
+	}
+
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public Product(Integer id, String name, Float price, String description, Brand brand, Category category) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+		this.brand = brand;
+		this.category = category;
+	}
+
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

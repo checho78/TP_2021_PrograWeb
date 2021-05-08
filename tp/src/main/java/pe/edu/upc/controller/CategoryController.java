@@ -22,8 +22,11 @@ public class CategoryController {
 	 @Inject
 	 private ICategoryService caS;
 	 
+
 	 private Category category;
+	
 	 List<Category> listCategories;
+
 	 
 	 
 	 @PostConstruct
@@ -32,6 +35,7 @@ public class CategoryController {
 		 this.listCategories =  new ArrayList<Category>();
 		 this.category = new Category();
 		 this.list();
+	
 	 }
 	 
 	 public String newCategory() {
@@ -47,7 +51,8 @@ public class CategoryController {
 		public void list() {
 			listCategories = caS.list();
 		}
-	
+		
+
 		public void clean() {
 			this.init();
 		}
@@ -83,8 +88,5 @@ public class CategoryController {
 		public void setListCategories(List<Category> listCategories) {
 			this.listCategories = listCategories;
 		}
-
-		
-		
 
 }

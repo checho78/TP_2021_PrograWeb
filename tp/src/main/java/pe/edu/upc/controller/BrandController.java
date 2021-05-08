@@ -19,16 +19,22 @@ public class BrandController implements Serializable {
 	
 	@Inject
 	 private IBrandService bService;
-	 
+	
+	
 	 private Brand brand;
+	
 	 List<Brand> listBrands;
+	 
 	 
 	 @PostConstruct
 	 public void init()
 	 {
+
 		 this.listBrands =  new ArrayList<Brand>();
 		 this.brand = new Brand();
+		
 		 this.list();
+
 	 }
 	 
 	 public String newBrand() {
@@ -44,6 +50,7 @@ public class BrandController implements Serializable {
 		public void list() {
 			listBrands = bService.list();
 		}
+		
 		
 		public void clean() {
 			this.init();
@@ -80,6 +87,8 @@ public class BrandController implements Serializable {
 		public void setListBrands(List<Brand> listBrands) {
 			this.listBrands = listBrands;
 		}
+		
+	
 }
 	 
 	 
