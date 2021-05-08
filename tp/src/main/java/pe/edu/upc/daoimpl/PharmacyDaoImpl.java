@@ -42,7 +42,6 @@ public class PharmacyDaoImpl implements IPharmacyDao, Serializable {
 		return list;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public void delete (int idPharmacy) 
 	{
 		Pharmacy p = new Pharmacy();

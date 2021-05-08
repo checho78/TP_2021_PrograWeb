@@ -71,7 +71,12 @@ public class BrandController implements Serializable {
 				System.out.println(e.getMessage());
 			}
 	     }
-//eliminar
+
+	
+	
+		
+		//SETTERS AND GETTERS
+		
 		public Brand getBrand() {
 			return brand;
 		}
@@ -87,6 +92,7 @@ public class BrandController implements Serializable {
 		public void setListBrands(List<Brand> listBrands) {
 			this.listBrands = listBrands;
 		}
+	
 		
 	
 }

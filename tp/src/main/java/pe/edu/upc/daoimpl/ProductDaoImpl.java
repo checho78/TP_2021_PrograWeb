@@ -28,7 +28,7 @@ public class ProductDaoImpl implements IProductDao, Serializable{
 		catch(Exception ex){
 			System.out.println(ex.getMessage());
 		}
-		// TODO Auto-generated method stub
+		
 	}
 	
 
@@ -36,7 +36,7 @@ public class ProductDaoImpl implements IProductDao, Serializable{
 	@SuppressWarnings("unchecked")
 	public List<Product> list() {
 		List<Product> list = new ArrayList<Product>();
-		Query q = em.createQuery("select p from Product p");
+		Query q = em.createQuery(" from Product p");
 		list = (List<Product>)q.getResultList();
 		
 		return list;
@@ -44,7 +44,7 @@ public class ProductDaoImpl implements IProductDao, Serializable{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Product> findByNameProdcut(Product p) {
+	public List<Product> findByNameProduct(Product p) {
 		List<Product> list = new ArrayList<Product>();
 		Query q = em.createQuery("from Product p where p.name like ?1");
 		q.setParameter(1, '%' + p.getName() + '%');

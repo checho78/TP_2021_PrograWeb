@@ -8,7 +8,7 @@ public interface IProductDao {
 	
 	public void insert(Product p);
 	public List<Product> list();
-	public List<Product> findByNameProdcut(Product c);
+	public List<Product> findByNameProduct(Product p);
 	public void eliminar(int idproduct);
 	
 }

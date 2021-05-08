@@ -50,7 +50,7 @@ public class BrandDaoImpl implements IBrandDao, Serializable{
 		return list;
 	}
 
-	//eliminar
+	
 	@Transactional
 	@Override
 	public void delete(int id) {

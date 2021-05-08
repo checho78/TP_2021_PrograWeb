@@ -14,16 +14,15 @@ import javax.persistence.Table;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "product_id")
-	private Integer id;
+	private int id;
 	
 	@Column(name = "name", length = 30)
 	private String name;
 	
-	@Column(columnDefinition = "8,2")
-	private Float price;
+	@Column(name = "price")
+	private Double   price;
 	
-	@Column(name = "description_id", length = 100)
+	@Column(name = "description", length = 100)
 	private String description;
 	
 	@ManyToOne
@@ -34,55 +33,12 @@ public class Product {
 	@JoinColumn(name = "id")
 	private Category category;
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	
+	
+	// getters and  setter
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Float getPrice() {
-		return price;
-	}
-
-	public void setPrice(Float price) {
-		this.price = price;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Brand getBrand() {
-		return brand;
-	}
-
-	public void setBrand(Brand brand) {
-		this.brand = brand;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
-	}
-
-	public Product(Integer id, String name, Float price, String description, Brand brand, Category category) {
+	public Product(int id, String name, Double price, String description, Brand brand, Category category) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -91,11 +47,99 @@ public class Product {
 		this.brand = brand;
 		this.category = category;
 	}
+
+
+
 
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
+	public Double getPrice() {
+		return price;
+	}
+
+
+
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+
+
+	public Brand getBrand() {
+		return brand;
+	}
+
+
+
+
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
+
+
+
+
+	public Category getCategory() {
+		return category;
+	}
+
+
+
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	
 	
 	
 }

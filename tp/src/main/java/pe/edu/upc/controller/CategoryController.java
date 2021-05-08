@@ -16,7 +16,7 @@ import pe.edu.upc.service.ICategoryService;
 
 @Named
 @RequestScoped
-public class CategoryController {
+public class CategoryController implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	 @Inject

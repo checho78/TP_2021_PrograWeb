@@ -16,21 +16,19 @@ public class ProductServicelmpl implements IProductService{
 	@Override
 	public void insert(Product p) {
 		pD.insert(p);
-		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public List<Product> list() {
-		// TODO Auto-generated method stub
 		return pD.list();
 	}
 
 	@Override
 	public List<Product> fingByNameProduct(Product p) {
-		// TODO Auto-generated method stub
-		return pD.findByNameProdcut(p);
+		return pD.findByNameProduct(p);
 	}
 	
+	@Override
 	public void eliminar(int idproduct) {
 		pD.eliminar(idproduct);
 	}
